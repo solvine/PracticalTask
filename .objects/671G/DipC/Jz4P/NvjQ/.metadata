@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Label - Posts",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "NvjQG1b8sUCOUdikn6oMXw",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/NvjQG1b8sUCOUdikn6oMXw",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-09T16:38:06.751316Z",
+  "Updated": "2025-04-09T16:38:39.8466025Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

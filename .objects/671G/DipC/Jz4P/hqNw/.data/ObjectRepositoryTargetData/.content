@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="gVKAWmtPSEqCDia-thv7FQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/feed" CVScreenId="718d6e30-f01e-4214-a85e-6ee92263eaba" CvTextArea="804, 167, 43, 13" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="488, 156, 280, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Search' class='*input search*' /&gt;" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Search' class='*input search*' type='text' placeholder='Search' /&gt;" Guid="ff3a3925-cf73-4390-80e5-b79e6a2b4c1a" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="504, 166, 15, 14" FullSelectorArgument="&lt;webctrl tag='use' href='#search*' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='use' href='#search*' /&gt;" Guid="2ca59ea7-af05-4b78-938f-c52405d5a5ff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE9SURBVDhPrZM/qoNAEIdzMfOnMEEbryB4BKvcQIxRQZCAheQUdnYeISgmgoVdVDAXmMcMGJ47eckjSfGhzPz8WGd3Z7fbDb7FTCx8wkNZ0zQQhiEYhgGLxQI2mw3s93soy5Jln8qSJAFZlkGSJAaKsyxjkoeyuq5hvV7Th47jwOl0guv1Ss/dbkd1VVXhfD4zEZOZpkkfeJ7HgojrutRHsdhjsvF38jxnQQTr2MdZij0mW61WFO66jgWRtm2pv1wu6V3sT2SaplG4KAoWRMaV4dyGYWD9iSwIAgpHUcSCCNb/PbPL5QLz+ZyOxvF4nOxmHMf3I2NZFhMxGZKmKSiKct+Mv7Bt+7UMqaoKttstDRrRdZ1uBK7ot9D3/deyZ4jCw+HwvkwU4nHq+/59GTJeLzwBY+1tGSLelI9kIj/W+Ybxs4cHKAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="99bf8e6037401aba8d53fa690d6a107f.png" xmlns="">0jrY7AkJ-ck6WkDU3NjHaPA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

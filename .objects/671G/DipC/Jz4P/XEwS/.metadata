@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Link - Persons Full Name",
+  "Type": "Element",
+  "TaxonomyType": "Link",
+  "Id": "XEwSUKRKkkaTJXnbAjKNhQ",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-09T16:45:34.0155538Z",
+  "Updated": "2025-04-09T16:51:57.8393954Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

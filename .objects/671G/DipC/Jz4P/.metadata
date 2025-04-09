@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Screen - Linkedin Feed",
+  "Type": "Screen",
+  "Id": "Jz4PG7wzWka1N3jPC_sa7w",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/DipCruLdVEunWKnSkirieQ",
+  "Created": "2025-04-09T16:16:22.2396567Z",
+  "Updated": "2025-04-09T16:17:56.8947804Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

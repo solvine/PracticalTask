@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Qb60ozgv80qHG3vEegUV_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/search/results/all" CVScreenId="815ba8c0-bda0-4e85-ab50-bf15bb380968" DesignTimeRectangle="704, 647, 527, 25" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H2' visibleinnertext='Posts' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='H2' visibleinnertext='Posts' aaname='*Posts*' check:text='Posts' /&gt;" Guid="6c1018c0-66d1-4f6d-84a6-cb0fbf41a4d6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="11c575ee-84d8-411a-9fae-f817dcdca8df" CvElementArea="862, 682, 126, 35" CvTextArea="876, 692, 99, 15" CvTextArgument="Past 24 hours" CvType="Button" DesignTimeRectangle="864, 684, 122, 32" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl aaname='*Past 24 hours*' tag='A' type='button' check:innerText='*Past 24 hours' /&gt;" Guid="8faba5ce-619e-417f-a617-246a5ff4109c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6719663d9080a9044eb213e09371a551.png" xmlns="">00c6aS6FhAkumCMprrj1qYA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">KeyboardShortcut</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

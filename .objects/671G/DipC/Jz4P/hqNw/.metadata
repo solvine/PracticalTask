@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Input - Search",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "hqNweiH_NUmSeA5MVmbOyw",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/hqNweiH_NUmSeA5MVmbOyw",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-09T16:18:48.0600434Z",
+  "Updated": "2025-04-09T16:24:46.4169068Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

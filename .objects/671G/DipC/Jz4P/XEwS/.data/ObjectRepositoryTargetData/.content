@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Blkx5U6J6U-Tcz5WZS0HEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" DesignTimeRectangle="760, 575, 165, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, in_PersonsFullName)]" FuzzyAccuracy="0.8" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' check:text='{0}*' /&gt;&quot;, in_PersonsFullName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7f8c899ecf1ffc45d113f147dc12cf29.png" xmlns="">0qfcLXauIaE26OpwZpoh94g</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="Viktorija Nielsen" Name="in_PersonsFullName" />
+    </scg:List>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

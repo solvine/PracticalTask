@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0RSk5E2wB0ad8jyNlz20pg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/in/victor-buga-82823964/details/skills" CVScreenId="483c43c0-d39d-476a-a5a0-9f773a2f1f28" CvTextArea="509, 301, 48, 18" CvTextArgument="Skills" CvType="Text" DesignTimeRectangle="499, 284, 70, 48" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='Skills' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='Skills' check:text='Skills' /&gt;" Guid="e9e4dc19-a361-4283-8eff-365b1ecf46bb" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="483c43c0-d39d-476a-a5a0-9f773a2f1f28" CvElementArea="461, 342, 47, 36" CvTextArea="473, 352, 21, 15" CvTextArgument="All" CvType="Button" DesignTimeRectangle="463, 344, 43, 32" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='*All*' check:innerText='All' /&gt;" Guid="e919af16-d43b-4237-9270-b9ef22cd08a5" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d23324f5efecc95c13fb88e5f362aded.png" xmlns="">02FmTpIHUTUmdouM4KlSdUw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

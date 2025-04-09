@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1VTdlUvmpUOEs3SELG23Sw" Reference="hPsj5yDg0k6roj3PXS8Ayw/Wq-PQfYSA0euqVxgMb-Dsg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/in/loretavaluckaite" CVScreenId="4ddcf803-2e8c-46e6-b935-c6d62eb5deb3" DesignTimeRectangle="770, 964, 122, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*Show all*skills*' tag='SPAN' /&gt;" Guid="b8c52172-0a64-4e2a-ba28-e265023eb17a" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="338f1d5bda49dbf003e7e6a6761405b3.png" xmlns="">04kqUOt3i-ESAWkJcnDUv_g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

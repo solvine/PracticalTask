@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Label - Skills",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "8VLUZzkT80-U1VvawB1E7g",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/8VLUZzkT80-U1VvawB1E7g",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-09T17:27:41.8452613Z",
+  "Updated": "2025-04-09T17:27:53.2253705Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

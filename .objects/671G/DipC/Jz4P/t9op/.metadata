@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button - Tools & Technologies",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "t9op756oXUSv4n36zeJxVQ",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/t9op756oXUSv4n36zeJxVQ",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-09T17:30:10.5365438Z",
+  "Updated": "2025-04-09T17:32:24.8255978Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
