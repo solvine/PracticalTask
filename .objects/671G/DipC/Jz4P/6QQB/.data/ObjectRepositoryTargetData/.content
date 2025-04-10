@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xG8dX9H8gkGCWjIttdB2XA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/search/results/all" CVScreenId="dd8bd476-e980-4f11-a771-1ebd99c71354" CvTextArea="989, 302, 182, 15" CvTextArgument="Did you mean*" CvType="Text" DesignTimeRectangle="990, 298, 507, 24" DesignTimeScaleFactor="1" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='DIV' aaname='*Did you mean*' check:text='Did you mean*' /&gt;" Guid="22cef8b8-5d07-492c-8b0d-3129c1a0ad21" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="dd8bd476-e980-4f11-a771-1ebd99c71354" CvTextArea="730, 301, 117, 22" CvTextArgument="On this page" CvType="Text" DesignTimeRectangle="733, 296, 193, 25" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='H2' innertext='On this page' aaname='On this page' check:text='On this page' /&gt;" Guid="aae8191e-5fbf-4305-a60e-8ecc52da3a59" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2b79aed426ed132e52e621c906d5c6f1.png" xmlns="">0zLUCL8O_8U-ZwlcKadp5pQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="95kU71S-ykehJjtCDP9ZEQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="3zKNdFadaEy0yGkb2fsniA" Reference="hPsj5yDg0k6roj3PXS8Ayw/kCYAzFRDY0S9DIU5-EJRlA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/in/viktorija-nielsen" CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" CvTextArea="461, 485, 181, 27" CvTextArgument="[in_PersonsFullName]" CvType="Text" DesignTimeRectangle="463, 479, 178, 32" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='H1' aaname='{0}' check:innerText='{0}' /&gt;&quot;, in_PersonsFullName)]" Guid="18d4e556-9dfe-4818-af82-b60baebd32f6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/in/viktorija-nielsen" CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" CvTextArea="461, 485, 181, 27" CvTextArgument="[G_PersonsName]" CvType="Text" DesignTimeRectangle="741, 491, 126, 32" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='{0}*' /&gt;&quot;, G_PersonsName)]" FuzzyAccuracy="0.8" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='{0}' /&gt;&quot;, G_PersonsName)]" Guid="18d4e556-9dfe-4818-af82-b60baebd32f6" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
       <TargetAnchorable.Anchors>
         <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" CvTextArea="469, 540, 80, 13" CvTextArgument="Contact info" CvType="Text" DesignTimeRectangle="471, 538, 78, 18" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' check:innerText='Contact info' /&gt;" Guid="a4403720-de73-485d-9133-e0dda68518d1" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" CvTextArea="469, 540, 80, 13" CvTextArgument="Contact info" CvType="Text" DesignTimeRectangle="808, 550, 78, 18" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' check:text='Contact info' /&gt;" Guid="a4403720-de73-485d-9133-e0dda68518d1" SearchSteps="Selector, FuzzySelector, CV" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="a9c5aef69be65a90ce1286495aad94f3.png" xmlns="">0aykQ8k2or02J8hs5HKY48g</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="5631c8cbd8387f40eec23879a77f49f6.png" xmlns="">0W4C6DJJziUWsQBvtH1pYfA</imageRef>
     </TargetAnchorable>
     <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
-      <ObjectRepositoryVariableData DefaultValue="Viktorija Nielsen" IsVariable="False" Name="in_PersonsFullName" />
+      <ObjectRepositoryVariableData DefaultValue="Victor Buga" Name="G_PersonsName" />
     </scg:List>
-    <x:String x:Key="ActivityType">Click</x:String>
+    <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>
