@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Label - Skill (By Index)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "BaljCHJYLkOdT_CceSuNBA",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/BaljCHJYLkOdT_CceSuNBA",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-11T14:56:17.1100131Z",
+  "Updated": "2025-04-11T15:12:08.9573102Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

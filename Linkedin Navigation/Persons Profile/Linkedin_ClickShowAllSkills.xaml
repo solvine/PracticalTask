@@ -93,33 +93,33 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_ClickShowAllSkills" sap:VirtualizedContainerService.HintSize="1022,845" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_ClickShowAllSkills" sap:VirtualizedContainerService.HintSize="1022,1057.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" sap:VirtualizedContainerService.HintSize="1022,822" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8c0fa73a-f0dc-4227-b0a5-504eb3086719" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,869" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8c0fa73a-f0dc-4227-b0a5-504eb3086719" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,582" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,628" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Button - Show All Skills'" sap:VirtualizedContainerService.HintSize="954,520" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8c0fa73a-f0dc-4227-b0a5-504eb3086719" Timeout="60" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Button - Show All Skills'" sap:VirtualizedContainerService.HintSize="954,566" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8c0fa73a-f0dc-4227-b0a5-504eb3086719" Timeout="60" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button - Show All Skills'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8c0fa73a-f0dc-4227-b0a5-504eb3086719" Version="V4">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button - Show All Skills'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,220" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8c0fa73a-f0dc-4227-b0a5-504eb3086719" Version="V4">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="linkedin.com/in/loretavaluckaite" CVScreenId="4ddcf803-2e8c-46e6-b935-c6d62eb5deb3" ContentHash="1VTdlUvmpUOEs3SELG23Sw" DesignTimeRectangle="770, 964, 122, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*Show all*skills*' tag='SPAN' /&gt;" Guid="b8c52172-0a64-4e2a-ba28-e265023eb17a" ImageBase64="" InformativeScreenshot="338f1d5bda49dbf003e7e6a6761405b3.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/Wq-PQfYSA0euqVxgMb-Dsg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -131,7 +131,7 @@
                         <uix:VerifyExecutionOptions.Target>
                           <uix:TargetAnchorable BrowserURL="linkedin.com/in/victor-buga-82823964/details/skills" CVScreenId="483c43c0-d39d-476a-a5a0-9f773a2f1f28" ContentHash="0RSk5E2wB0ad8jyNlz20pg" CvTextArea="509, 301, 48, 18" CvTextArgument="Skills" CvType="Text" DesignTimeRectangle="499, 284, 70, 48" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='Skills' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='Skills' check:text='Skills' /&gt;" Guid="e9e4dc19-a361-4283-8eff-365b1ecf46bb" InformativeScreenshot="d23324f5efecc95c13fb88e5f362aded.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/8VLUZzkT80-U1VvawB1E7g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CVScreenId="483c43c0-d39d-476a-a5a0-9f773a2f1f28" CvElementArea="461, 342, 47, 36" CvTextArea="473, 352, 21, 15" CvTextArgument="All" CvType="Button" DesignTimeRectangle="463, 344, 43, 32" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='*All*' check:innerText='All' /&gt;" Guid="e919af16-d43b-4237-9270-b9ef22cd08a5" SearchSteps="FuzzySelector, CV" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -146,13 +146,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw DisplayName="Throw: Linkedin: Button - Show All Skills was not found" Exception="[new SystemException(&quot;Linkedin: Button - Show All Skills was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Throw: Linkedin: Button - Show All Skills was not found" Exception="[new SystemException(&quot;Linkedin: Button - Show All Skills was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -163,7 +163,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" ContentHash="NQ57gUZKrUaU74hk81TS8w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVFhH7VffS1NhGD6zZduRujEpUAvCugm66KbLoKuulbooCNLO2S5aoZIGRUJU5kV3GVJ/gQVFNYRIaueI82dLCq2b1C2z0JmliVvNPfF821lzbnPYjnjhCw/nO+/3ve/7fN/7/eCVpI0gdkUjCmRFL5FVvcxkFMtO3SI79Hhwh0cqPN9hsat6lazqPlnVP5uMPlnVq7a4XlpsTo8kyapOFMc7sE7gRLnaCQJcGrJLDLIrOrad0wTYTuPkf8BYjJmeAAOW13lxsnVYYG99T75JZCbAQHvqe9DeN4WF8BIWwhG090+hvC6vJDIT4JKfaB3Gr1AEhrBNHfvSOFsLNjCBWP6NFEREGpgCpmVdUkAwEDceZ01wQ+YS3B63zWFsdgKEtUZDwVmPwNYaTTinnmngvwEjIPXbnV3YdaEbJa7uxNg0wbMToDM6ufxoFLfcfgG2qaPD43feodkdwM3nfjQ9GcehqwPYfdGLU20jeOCZxIv3M3APBXHb7ceR629QtDJ4dgI2Rcf+xj5MfA8lNiHb1FmrPSKwIfOLEVx7PIanvmmxX5IlCmBsehFn7n9AkcMkAr8jUXz7GUaU0TKIP7iIo81vYVuejvwQMCSyFEVgJgTf+HyMUEr/vVdfsMPZZQ6B8J8l3O2cwOGmQZTV9uBYyxD6R+eWjRkcm0u9SfNHwPNxFqW1XhTGHy2ejNNtI+L+MMQfDKGioVf4zjuBlo7AsuNmUzQcvDKArz/CK+xNIXDj2biY9T8COioa0tuvG4FM9psENgnkTGDfpV5xeUzOhgTYps5araHx4Sdx29Epv/wvTCGQyT4nAgSfVRqQNcE2dXyS+fIdiOv55StpPNWr2SeNyU7AmEkyDD1vu2R9avDV7DMRYJHAYiF1oFlgEcRiSJJYHlldnRa7qlXGO8jOTPhkVau01r222J1arD6UVY0okBWNrLg0a0XpqlC0nSyEWRBvCPkL503cP2RijC4AAAAASUVORK5CYII=" InformativeScreenshot="5f59c039a00343c6b973ae140d89f39d.jpg" Reference="hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" Title="Feed | LinkedIn" Url="https://www.linkedin.com/feed/" Version="V1" />
+        <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" ContentHash="WNddIsLDFkOuVjPE_EvgdQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVFhH7VffS1NhGD6zZduRujEpUAvCugm66KbLoKuulbooCNLO2S5aoZIGRUJU5kV3GVJ/gQVFNYRIaueI82dLCq2b1C2z0JmliVvNPfF821lzbnPYjnjhCw/nO+/3ve/7fN/7/eCVpI0gdkUjCmRFL5FVvcxkFMtO3SI79Hhwh0cqPN9hsat6lazqPlnVP5uMPlnVq7a4XlpsTo8kyapOFMc7sE7gRLnaCQJcGrJLDLIrOrad0wTYTuPkf8BYjJmeAAOW13lxsnVYYG99T75JZCbAQHvqe9DeN4WF8BIWwhG090+hvC6vJDIT4JKfaB3Gr1AEhrBNHfvSOFsLNjCBWP6NFEREGpgCpmVdUkAwEDceZ01wQ+YS3B63zWFsdgKEtUZDwVmPwNYaTTinnmngvwEjIPXbnV3YdaEbJa7uxNg0wbMToDM6ufxoFLfcfgG2qaPD43feodkdwM3nfjQ9GcehqwPYfdGLU20jeOCZxIv3M3APBXHb7ceR629QtDJ4dgI2Rcf+xj5MfA8lNiHb1FmrPSKwIfOLEVx7PIanvmmxX5IlCmBsehFn7n9AkcMkAr8jUXz7GUaU0TKIP7iIo81vYVuejvwQMCSyFEVgJgTf+HyMUEr/vVdfsMPZZQ6B8J8l3O2cwOGmQZTV9uBYyxD6R+eWjRkcm0u9SfNHwPNxFqW1XhTGHy2ejNNtI+L+MMQfDKGioVf4zjuBlo7AsuNmUzQcvDKArz/CK+xNIXDj2biY9T8COioa0tuvG4FM9psENgnkTGDfpV5xeUzOhgTYps5araHx4Sdx29Epv/wvTCGQyT4nAgSfVRqQNcE2dXyS+fIdiOv55StpPNWr2SeNyU7AmEkyDD1vu2R9avDV7DMRYJHAYiF1oFlgEcRiSJJYHlldnRa7qlXGO8jOTPhkVau01r222J1arD6UVY0okBWNrLg0a0XpqlC0nSyEWRBvCPkL503cP2RijC4AAAAASUVORK5CYII=" InformativeScreenshot="5f59c039a00343c6b973ae140d89f39d.jpg" Reference="hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w" Selector="&lt;html app='chrome.exe' url='https://www.linkedin.com/*' /&gt;" Url="https://www.linkedin.com/" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

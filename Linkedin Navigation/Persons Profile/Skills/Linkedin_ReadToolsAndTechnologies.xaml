@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ReadToolsAndTechnologies" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ReadToolsAndTechnologies" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_dt_ToolsAndTechnologies" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_ToolsAndTechnologies" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -48,6 +48,13 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -104,52 +111,133 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_ReadToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="877,1023" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_ReadToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="787,609" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Reading Started" sap:VirtualizedContainerService.HintSize="520,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tools &amp; Technologies reading started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="520,825" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="efcc9e31-b21f-4d9b-8636-58c665096145" Version="V2">
+    <ui:LogMessage DisplayName="Log Message: Reading Started" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tools &amp; Technologies reading started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,411" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="efcc9e31-b21f-4d9b-8636-58c665096145" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,584" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Reads each Tool &amp; Technology separately according to Index. If the item with the index is not found, considers the previous item as the last" DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="x:String" Name="Text" />
+              <Variable x:TypeArguments="x:String" Name="Index">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">1</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:Boolean" Name="LastValue">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Boolean" />
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,352" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While Last Value is False" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1069,727" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="False" DataTable="[out_dt_ToolsAndTechnologies]" DisplayName="Extract Table Data 'Table - Tools &amp; Technologies'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Tools'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,181" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" Version="V4">
-                    <uix:NExtractData.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.linkedin.com/in/victor-buga-82823964/details/skills/" ContentHash="0B7N-58mdE2zDsAe37vVAQ" DesignTimeRectangle="717, 336, 804, 980" DesignTimeScaleFactor="1" ElementType="List" FullSelectorArgument="&lt;webctrl parentid='ember*' tag='UL' /&gt;" Guid="1f6a8ec7-8435-4d5a-978e-c44972710660" InformativeScreenshot="63d548d4a014c8345b78de83a69f1438.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/boDHFw6qSku7cJQ_AUz1MQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                    </uix:NExtractData.Target>
-                  </uix:NExtractData>
+                  <uix:NCheckState DisplayName="Check App State 'Label - Skill (By Index)'" sap:VirtualizedContainerService.HintSize="1035,667" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" Timeout="30" Version="V4">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,425" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text 'Label - Skill (By Index)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="479,190" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" TextString="[Text]" Version="V4">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="linkedin.com/in/giedre-buga-b43163100/details/skills" CVScreenId="344d2dae-0b0c-40d0-9e8c-2a9c5efff6cb" ContentHash="azNK-gYgmE-N_OU2O3VXfQ" DesignTimeRectangle="125, 348, 76, 24" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='SPAN' parentid='*TOOLS-AND-TECHOLOGY-SKILLS*' parentclass='*hoverable-link-text t-bold' idx='{0}' /&gt;&quot;, Index)]" FuzzyAccuracy="0.8" Guid="23283460-3f32-418a-8f3e-511d3ce1179b" ImageBase64="" InformativeScreenshot="86b5a1513ff2e9e606230f3c3db743ca.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/BaljCHJYLkOdT_CceSuNBA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <ui:MultipleAssign DisplayName="Assign ToolsAndTechnologies and Increment Index" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[out_ToolsAndTechnologies]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">[If(String.IsNullOrEmpty(out_ToolsAndTechnologies), Text, String.Concat(out_ToolsAndTechnologies, ", ", Text) )]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[Index]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">[(Cint(Index) + 2).ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,170" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Assign Last Value" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[LastValue]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="linkedin.com/in/giedre-buga-b43163100/details/skills" CVScreenId="344d2dae-0b0c-40d0-9e8c-2a9c5efff6cb" ContentHash="azNK-gYgmE-N_OU2O3VXfQ" DesignTimeRectangle="125, 348, 76, 24" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='SPAN' parentid='*TOOLS-AND-TECHOLOGY-SKILLS*' parentclass='*hoverable-link-text t-bold' idx='{0}' /&gt;&quot;, Index)]" FuzzyAccuracy="0.8" Guid="23283460-3f32-418a-8f3e-511d3ce1179b" ImageBase64="" InformativeScreenshot="86b5a1513ff2e9e606230f3c3db743ca.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/BaljCHJYLkOdT_CceSuNBA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
                 </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,170" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;test&quot;]" />
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="LastValue = False" />
+              </ui:InterruptibleWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" ContentHash="NQ57gUZKrUaU74hk81TS8w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVFhH7VffS1NhGD6zZduRujEpUAvCugm66KbLoKuulbooCNLO2S5aoZIGRUJU5kV3GVJ/gQVFNYRIaueI82dLCq2b1C2z0JmliVvNPfF821lzbnPYjnjhCw/nO+/3ve/7fN/7/eCVpI0gdkUjCmRFL5FVvcxkFMtO3SI79Hhwh0cqPN9hsat6lazqPlnVP5uMPlnVq7a4XlpsTo8kyapOFMc7sE7gRLnaCQJcGrJLDLIrOrad0wTYTuPkf8BYjJmeAAOW13lxsnVYYG99T75JZCbAQHvqe9DeN4WF8BIWwhG090+hvC6vJDIT4JKfaB3Gr1AEhrBNHfvSOFsLNjCBWP6NFEREGpgCpmVdUkAwEDceZ01wQ+YS3B63zWFsdgKEtUZDwVmPwNYaTTinnmngvwEjIPXbnV3YdaEbJa7uxNg0wbMToDM6ufxoFLfcfgG2qaPD43feodkdwM3nfjQ9GcehqwPYfdGLU20jeOCZxIv3M3APBXHb7ceR629QtDJ4dgI2Rcf+xj5MfA8lNiHb1FmrPSKwIfOLEVx7PIanvmmxX5IlCmBsehFn7n9AkcMkAr8jUXz7GUaU0TKIP7iIo81vYVuejvwQMCSyFEVgJgTf+HyMUEr/vVdfsMPZZQ6B8J8l3O2cwOGmQZTV9uBYyxD6R+eWjRkcm0u9SfNHwPNxFqW1XhTGHy2ejNNtI+L+MMQfDKGioVf4zjuBlo7AsuNmUzQcvDKArz/CK+xNIXDj2biY9T8COioa0tuvG4FM9psENgnkTGDfpV5xeUzOhgTYps5araHx4Sdx29Epv/wvTCGQyT4nAgSfVRqQNcE2dXyS+fIdiOv55StpPNWr2SeNyU7AmEkyDD1vu2R9avDV7DMRYJHAYiF1oFlgEcRiSJJYHlldnRa7qlXGO8jOTPhkVau01r222J1arD6UVY0okBWNrLg0a0XpqlC0nSyEWRBvCPkL503cP2RijC4AAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="5f59c039a00343c6b973ae140d89f39d.jpg" Reference="hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" Url="https://www.linkedin.com/feed/" Version="V1" />
+        <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" ContentHash="WNddIsLDFkOuVjPE_EvgdQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVFhH7VffS1NhGD6zZduRujEpUAvCugm66KbLoKuulbooCNLO2S5aoZIGRUJU5kV3GVJ/gQVFNYRIaueI82dLCq2b1C2z0JmliVvNPfF821lzbnPYjnjhCw/nO+/3ve/7fN/7/eCVpI0gdkUjCmRFL5FVvcxkFMtO3SI79Hhwh0cqPN9hsat6lazqPlnVP5uMPlnVq7a4XlpsTo8kyapOFMc7sE7gRLnaCQJcGrJLDLIrOrad0wTYTuPkf8BYjJmeAAOW13lxsnVYYG99T75JZCbAQHvqe9DeN4WF8BIWwhG090+hvC6vJDIT4JKfaB3Gr1AEhrBNHfvSOFsLNjCBWP6NFEREGpgCpmVdUkAwEDceZ01wQ+YS3B63zWFsdgKEtUZDwVmPwNYaTTinnmngvwEjIPXbnV3YdaEbJa7uxNg0wbMToDM6ufxoFLfcfgG2qaPD43feodkdwM3nfjQ9GcehqwPYfdGLU20jeOCZxIv3M3APBXHb7ceR629QtDJ4dgI2Rcf+xj5MfA8lNiHb1FmrPSKwIfOLEVx7PIanvmmxX5IlCmBsehFn7n9AkcMkAr8jUXz7GUaU0TKIP7iIo81vYVuejvwQMCSyFEVgJgTf+HyMUEr/vVdfsMPZZQ6B8J8l3O2cwOGmQZTV9uBYyxD6R+eWjRkcm0u9SfNHwPNxFqW1XhTGHy2ejNNtI+L+MMQfDKGioVf4zjuBlo7AsuNmUzQcvDKArz/CK+xNIXDj2biY9T8COioa0tuvG4FM9psENgnkTGDfpV5xeUzOhgTYps5araHx4Sdx29Epv/wvTCGQyT4nAgSfVRqQNcE2dXyS+fIdiOv55StpPNWr2SeNyU7AmEkyDD1vu2R9avDV7DMRYJHAYiF1oFlgEcRiSJJYHlldnRa7qlXGO8jOTPhkVau01r222J1arD6UVY0okBWNrLg0a0XpqlC0nSyEWRBvCPkL503cP2RijC4AAAAASUVORK5CYII=" InformativeScreenshot="5f59c039a00343c6b973ae140d89f39d.jpg" Reference="hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w" Selector="&lt;html app='chrome.exe' url='https://www.linkedin.com/*' /&gt;" Url="https://www.linkedin.com/" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
