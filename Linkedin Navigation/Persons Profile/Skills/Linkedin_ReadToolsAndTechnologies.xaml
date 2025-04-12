@@ -122,32 +122,24 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_ReadToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="787,609" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_ReadToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="1260,1391" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Reading Started" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tools &amp; Technologies reading started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,411" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="efcc9e31-b21f-4d9b-8636-58c665096145" Version="V2">
+    <ui:LogMessage DisplayName="Log Message: Reading Started" sap:VirtualizedContainerService.HintSize="1171,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Tools &amp; Technologies reading started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1171,1195" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="efcc9e31-b21f-4d9b-8636-58c665096145" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Reads each Tool &amp; Technology separately according to Index. If the item with the index is not found, considers the previous item as the last" DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Reads each Tool &amp; Technology separately according to Index. If the item with the index is not found, considers the previous item as the last" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1137,955" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Text" />
-              <Variable x:TypeArguments="x:String" Name="Index">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">1</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:Boolean" Name="LastValue">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Boolean" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="1" Name="Index" />
+              <Variable x:TypeArguments="x:Boolean" Default="False" Name="LastValue" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,28 +147,28 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While Last Value is False" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[LastValue = False]" DisplayName="While Last Value is False" sap:VirtualizedContainerService.HintSize="1103,862" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1069,727" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1069,723" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State 'Label - Skill (By Index)'" sap:VirtualizedContainerService.HintSize="1035,667" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" Timeout="30" Version="V4">
+                  <uix:NCheckState DisplayName="Check App State 'Label - Skill (By Index)'" sap:VirtualizedContainerService.HintSize="1035,663" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" Timeout="10" Version="V4">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,425" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,423" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGetText DisplayName="Get Text 'Label - Skill (By Index)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="479,190" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" TextString="[Text]" Version="V4">
+                        <uix:NGetText DisplayName="Get Text 'Label - Skill (By Index)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="efcc9e31-b21f-4d9b-8636-58c665096145" TextString="[Text]" Version="V4">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable BrowserURL="linkedin.com/in/giedre-buga-b43163100/details/skills" CVScreenId="344d2dae-0b0c-40d0-9e8c-2a9c5efff6cb" ContentHash="azNK-gYgmE-N_OU2O3VXfQ" DesignTimeRectangle="125, 348, 76, 24" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='SPAN' parentid='*TOOLS-AND-TECHOLOGY-SKILLS*' parentclass='*hoverable-link-text t-bold' idx='{0}' /&gt;&quot;, Index)]" FuzzyAccuracy="0.8" Guid="23283460-3f32-418a-8f3e-511d3ce1179b" ImageBase64="" InformativeScreenshot="86b5a1513ff2e9e606230f3c3db743ca.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/BaljCHJYLkOdT_CceSuNBA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <ui:MultipleAssign DisplayName="Assign ToolsAndTechnologies and Increment Index" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                        <ui:MultipleAssign DisplayName="Assign ToolsAndTechnologies and Increment Index" sap:VirtualizedContainerService.HintSize="479,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -201,13 +193,13 @@
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,170" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,169" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign Last Value" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign DisplayName="Assign Last Value" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[LastValue]</OutArgument>
                           </Assign.To>
@@ -223,12 +215,9 @@
                   </uix:NCheckState>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="LastValue = False" />
-              </ui:InterruptibleWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>

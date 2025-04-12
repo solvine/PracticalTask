@@ -101,34 +101,34 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_CheckPersonExists" sap:VirtualizedContainerService.HintSize="1835,1269" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_CheckPersonExists" sap:VirtualizedContainerService.HintSize="1260,909" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Person Exists Check Started" sap:VirtualizedContainerService.HintSize="1596,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting to check if the person exists on Linkedin&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1596,1071" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="8a24c606-d247-4784-b893-243faba367da" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message: Person Exists Check Started" sap:VirtualizedContainerService.HintSize="1058,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting to check if the person exists on Linkedin&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1058,713" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="8a24c606-d247-4784-b893-243faba367da" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1562,830" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1024,473" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Link - Persons Full Name'" sap:VirtualizedContainerService.HintSize="1528,768" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="8a24c606-d247-4784-b893-243faba367da" Timeout="60" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Link - Persons Full Name'" sap:VirtualizedContainerService.HintSize="990,411" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="8a24c606-d247-4784-b893-243faba367da" Timeout="30" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,170" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,169" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign PersonFound" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign DisplayName="Assign PersonFound" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[out_PersonFound]</OutArgument>
                     </Assign.To>
@@ -139,50 +139,20 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1006,484" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,169" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State 'Label - Did you mean'" sap:VirtualizedContainerService.HintSize="972,422" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8a24c606-d247-4784-b893-243faba367da" Timeout="60" Version="V4">
-                    <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,170" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign PersonFound" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_1">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Boolean">[out_PersonFound]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </uix:NCheckState.IfExists>
-                    <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="Throw: Linkedin: Label - Did you mean was not found" Exception="[new SystemException(&quot;Linkedin: Neither Label - Did you mean, nor Link - Persons Full Name was found&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                      </Sequence>
-                    </uix:NCheckState.IfNotExists>
-                    <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="linkedin.com/search/results/all" CVScreenId="dd8bd476-e980-4f11-a771-1ebd99c71354" ContentHash="xG8dX9H8gkGCWjIttdB2XA" CvTextArea="989, 302, 182, 15" CvTextArgument="Did you mean*" CvType="Text" DesignTimeRectangle="990, 298, 507, 24" DesignTimeScaleFactor="1" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='DIV' aaname='*Did you mean*' check:text='Did you mean*' /&gt;" Guid="22cef8b8-5d07-492c-8b0d-3129c1a0ad21" InformativeScreenshot="2b79aed426ed132e52e621c906d5c6f1.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/6QQBaooFQk6m2DGBlBZa8g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="dd8bd476-e980-4f11-a771-1ebd99c71354" CvTextArea="730, 301, 117, 22" CvTextArgument="On this page" CvType="Text" DesignTimeRectangle="733, 296, 193, 25" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='H2' innertext='On this page' aaname='On this page' check:text='On this page' /&gt;" Guid="aae8191e-5fbf-4305-a60e-8ecc52da3a59" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NCheckState.Target>
-                  </uix:NCheckState>
+                  <Assign DisplayName="Assign PersonFound" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[out_PersonFound]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
