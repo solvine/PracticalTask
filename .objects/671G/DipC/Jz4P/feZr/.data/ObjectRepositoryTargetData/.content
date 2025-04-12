@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="exBGih8U3UeiQ-GVbIhEtg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/checkpoint/challenge/AgER28XhRqUj1gAAAZYqEnUI55KGXMfd7OJBoaz9xrKJs86KswKI3Qj3cPwTjCGfzk17jW_m70SuuTReBZfqfvyIVmw6wg" CVScreenId="73c1df33-5113-45fd-85e3-25630a09aabe" DesignTimeRectangle="1050, 561, 476, 40" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='H1' aaname='Let’s do a quick security check' /&gt;" Guid="8e2fbd67-611f-4cfe-a39b-66550310bf52" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b17bdd2844047078cda0cda0ba41e38d.png" xmlns="">0jco8JlFI7EKWrk137sxIFA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
