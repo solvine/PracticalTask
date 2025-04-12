@@ -276,7 +276,7 @@
                   <uix:TargetAnchorable BrowserURL="linkedin.com/login" CVScreenId="d720bc5f-2167-477d-845d-a9f0054ca092" ContentHash="f1MKpEbxNU2nGnT1USqL-w" CvTextArea="1179, 972, 217, 19" CvTextArgument="*Sign in using another account*" CvType="Text" DesignTimeRectangle="1172, 961, 232, 37" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='signin-other-account' /&gt;&lt;webctrl tag='A' aaname='*Sign in using another account*' check:text='Sign in using another account' /&gt;" Guid="8c1eca33-0fb6-43d6-a91b-094e38fc398c" InformativeScreenshot="cae09bd52652060be138642b332dbbbe.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/QDwrm8zTj0WVMKGLemZDuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
                 </uix:NCheckState.Target>
               </uix:NCheckState>
-              <uix:NCheckState DisplayName="Check App State 'Button - Sign In 2'" sap:VirtualizedContainerService.HintSize="1057,451" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
+              <uix:NCheckState DisplayName="Check App State 'Input - Username'" sap:VirtualizedContainerService.HintSize="1057,451" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
@@ -315,11 +315,11 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Throw DisplayName="Throw: Linkedin: Button - Sign In 2 was not found" Exception="[new SystemException(&quot;Linkedin: Button - Sign In 2 was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                    <Throw DisplayName="Throw: Linkedin: Input - Username was not found" Exception="[new SystemException(&quot;Linkedin: Input - Username was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Throw_4" />
                   </Sequence>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
-                  <uix:TargetAnchorable BrowserURL="linkedin.com/checkpoint/lg/sign-in-another-account" CVScreenId="f5224d36-7c1f-4736-9a43-47742cbf2f8b" ContentHash="v7_F_qCnZkGi-ltKQu7aog" CvElementArea="1133, 885, 309, 57" CvTextArea="1261, 906, 53, 20" CvTextArgument="Sign in*" CvType="Button" DesignTimeRectangle="1136, 888, 304, 52" DesignTimeScaleFactor="1" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='BUTTON' type='submit' aria-label='Sign in' check:text='Sign in*' /&gt;" Guid="859f9811-a79c-4f1f-b040-cc61fb4238ab" InformativeScreenshot="cda2771e0dfb21530b834de8d7516fad.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/UVzYKm3vYUWP8UhEnjJ3Gw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="linkedin.com/checkpoint/lg/sign-in-another-account" CVScreenId="e4cbc296-051a-4993-b11c-dee2d162c7a0" ContentHash="yO5lQdW8eUi3oJZXIy-CUA" DesignTimeRectangle="1136, 704, 304, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' aria-label='Email or phone' type='email' aaname='*Email or phone*' /&gt;" Guid="9d87f355-992f-4153-a0cc-b5e1f3971eb4" InformativeScreenshot="8af74209f4552fa28a04fd335c0e85c2.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/vYs3a-UL0kqzWukfoqfWNA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive" />
                 </uix:NCheckState.Target>
               </uix:NCheckState>
             </Parallel>
