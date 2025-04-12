@@ -109,13 +109,13 @@
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1835,2681" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1835,3044" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Logs into Linkedin if needed, searches for two people on Linkedin, retrieves their Tools &amp; Technologies information and appends it to an excel file" DisplayName="Sequence Get Linkedin Information" sap:VirtualizedContainerService.HintSize="672,2658" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap2010:Annotation.AnnotationText="Logs into Linkedin if needed, searches for two people on Linkedin, retrieves their Tools &amp; Technologies information and appends it to an excel file" DisplayName="Sequence Get Linkedin Information" sap:VirtualizedContainerService.HintSize="672,3021" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="PersonFound" />
         <Variable x:TypeArguments="x:Boolean" Default="True" Name="SearchForPeople" />
@@ -136,10 +136,10 @@
           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_VerificationNeeded">[VerificationNeeded]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <If Condition="[VerificationNeeded = True]" DisplayName="If VerificationNeeded" sap:VirtualizedContainerService.HintSize="638,57" sap2010:WorkflowViewState.IdRef="If_8">
+      <If Condition="[VerificationNeeded = True]" DisplayName="If VerificationNeeded" sap:VirtualizedContainerService.HintSize="638,420" sap2010:WorkflowViewState.IdRef="If_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -151,7 +151,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Human Verification Needed" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Human Verification Needed for login. Please login manually and try again&quot;]" />
-            <ui:Return DisplayName="Return to Main" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Return_1" />
+            <ui:Return DisplayName="End Workflow" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Return_1" />
           </Sequence>
         </If.Then>
         <If.Else>
