@@ -1,4 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ClickPerson" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Linkedin_ClickPerson_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ClickPerson" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_PersonsName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Linkedin_ClickPerson_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -93,35 +100,35 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_ClickPerson" sap:VirtualizedContainerService.HintSize="1260,1235" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_ClickPerson" sap:VirtualizedContainerService.HintSize="1835,1317" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1212" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="477fa394-089d-4326-92b6-4d6e85469a37" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1294" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="477fa394-089d-4326-92b6-4d6e85469a37" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,972" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1054" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Link - Persons Full Name'" sap:VirtualizedContainerService.HintSize="954,491" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="477fa394-089d-4326-92b6-4d6e85469a37" Timeout="60" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Link - Persons Full Name'" sap:VirtualizedContainerService.HintSize="954,533" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="477fa394-089d-4326-92b6-4d6e85469a37" Timeout="60" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,242" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Link - Persons Full Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,180" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="477fa394-089d-4326-92b6-4d6e85469a37" Version="V4">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Link - Persons Full Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,182" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="477fa394-089d-4326-92b6-4d6e85469a37" Version="V4">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" ContentHash="fXhP3dlY1UOgXAXKPmLvjA" DesignTimeRectangle="1038, 329, 124, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, G_PersonsName)]" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' idx='1' check:text='{0}*' /&gt;&quot;, G_PersonsName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ImageBase64="" InformativeScreenshot="88dccd56e096af76ff036746ad265b1d.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" ContentHash="y-zFx0ISg0-W6P23edaN0w" DesignTimeRectangle="1038, 329, 124, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, in_PersonsName)]" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' idx='1' check:text='{0}*' /&gt;&quot;, in_PersonsName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ImageBase64="" InformativeScreenshot="87ab7245dbdb9585a74df69f564553da.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
                 </Sequence>
@@ -137,10 +144,10 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" ContentHash="fXhP3dlY1UOgXAXKPmLvjA" DesignTimeRectangle="1038, 329, 124, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, G_PersonsName)]" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' idx='1' check:text='{0}*' /&gt;&quot;, G_PersonsName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ImageBase64="" InformativeScreenshot="88dccd56e096af76ff036746ad265b1d.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" ContentHash="y-zFx0ISg0-W6P23edaN0w" DesignTimeRectangle="1038, 329, 124, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, in_PersonsName)]" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' idx='1' check:text='{0}*' /&gt;&quot;, in_PersonsName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ImageBase64="" InformativeScreenshot="87ab7245dbdb9585a74df69f564553da.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'Label - Persons Full Name'" sap:VirtualizedContainerService.HintSize="954,419" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="477fa394-089d-4326-92b6-4d6e85469a37" Timeout="60" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Label - Persons Full Name'" sap:VirtualizedContainerService.HintSize="954,459" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="477fa394-089d-4326-92b6-4d6e85469a37" Timeout="60" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -161,10 +168,10 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="linkedin.com/in/viktorija-nielsen" CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" ContentHash="3zKNdFadaEy0yGkb2fsniA" CvTextArea="461, 485, 181, 27" CvTextArgument="[G_PersonsName]" CvType="Text" DesignTimeRectangle="741, 491, 126, 32" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='{0}*' /&gt;&quot;, G_PersonsName)]" FuzzyAccuracy="0.8" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='{0}' /&gt;&quot;, G_PersonsName)]" Guid="18d4e556-9dfe-4818-af82-b60baebd32f6" ImageBase64="" InformativeScreenshot="5631c8cbd8387f40eec23879a77f49f6.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/kCYAzFRDY0S9DIU5-EJRlA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="linkedin.com/in/viktorija-nielsen" CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" ContentHash="_LfuJOag8kGOVtJrWVTPlA" CvTextArea="461, 485, 181, 27" CvTextArgument="[in_PersonsName]" CvType="Text" DesignTimeRectangle="741, 439, 126, 32" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='{0}*' /&gt;&quot;, in_PersonsName)]" FuzzyAccuracy="0.8" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl tag='H1' visibleinnertext='{0}' /&gt;&quot;, in_PersonsName)]" Guid="18d4e556-9dfe-4818-af82-b60baebd32f6" ImageBase64="" InformativeScreenshot="9ef0cc47a41aa21404bc496aba9cf524.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/kCYAzFRDY0S9DIU5-EJRlA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" CvTextArea="469, 540, 80, 13" CvTextArgument="Contact info" CvType="Text" DesignTimeRectangle="808, 550, 78, 18" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' check:text='Contact info' /&gt;" Guid="a4403720-de73-485d-9133-e0dda68518d1" SearchSteps="Selector, FuzzySelector, CV" />
+                      <uix:Target CVScreenId="3545b0bd-9640-4b91-9682-04363187f917" CvTextArea="469, 540, 80, 13" CvTextArgument="Contact info" CvType="Text" DesignTimeRectangle="808, 498, 78, 18" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='profile-content' tag='DIV' /&gt;&lt;webctrl id='*contact-info' tag='A' aaname='*Contact info*' check:text='Contact info' /&gt;" Guid="a4403720-de73-485d-9133-e0dda68518d1" SearchSteps="Selector, FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>

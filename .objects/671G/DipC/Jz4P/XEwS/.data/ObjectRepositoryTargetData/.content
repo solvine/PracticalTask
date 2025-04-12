@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="fXhP3dlY1UOgXAXKPmLvjA" Reference="hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="y-zFx0ISg0-W6P23edaN0w" Reference="hPsj5yDg0k6roj3PXS8Ayw/XEwSUKRKkkaTJXnbAjKNhQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" DesignTimeRectangle="1038, 329, 124, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, G_PersonsName)]" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' idx='1' check:text='{0}*' /&gt;&quot;, G_PersonsName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="88dccd56e096af76ff036746ad265b1d.png" xmlns="">0IHvsdEuvEUelgsO2X_BARw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/search/results/all" CVScreenId="eaddcaab-ac7c-4872-bf29-1d406f646074" DesignTimeRectangle="1038, 329, 124, 25" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' /&gt;&quot;, in_PersonsName)]" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' class='search-results-container' /&gt;&lt;webctrl tag='SPAN' visibleinnertext='{0}*' idx='1' check:text='{0}*' /&gt;&quot;, in_PersonsName)]" Guid="e9190013-15fd-4c83-a9b9-b408f8985f66" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="87ab7245dbdb9585a74df69f564553da.png" xmlns="">0LiMDx2CHyE2Srt-UQm5hAg</imageRef>
     </TargetAnchorable>
     <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
-      <ObjectRepositoryVariableData DefaultValue="Victor Buga" Name="G_PersonsName" />
+      <ObjectRepositoryVariableData DefaultValue="Victor Buga" Name="in_PersonsName" />
     </scg:List>
     <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>

@@ -1,4 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_Search" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Linkedin_Search_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_Search" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_PersonsName" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Linkedin_Search.in_PersonsName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Linkedin_Search.in_PersonsName>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Linkedin_Search_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -98,34 +108,34 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_Search" sap:VirtualizedContainerService.HintSize="1022,1375" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_Search" sap:VirtualizedContainerService.HintSize="1835,1328" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Person Search Started" sap:VirtualizedContainerService.HintSize="1022,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Linkedin Person Search has started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1177" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2b5d16a5-4e65-4dfb-b87c-41a496a7c459" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message: Person Search Started" sap:VirtualizedContainerService.HintSize="1022,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Linkedin Person Search has started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1132" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="2b5d16a5-4e65-4dfb-b87c-41a496a7c459" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,936" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,892" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Input - Search'" sap:VirtualizedContainerService.HintSize="954,874" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2b5d16a5-4e65-4dfb-b87c-41a496a7c459" Timeout="60" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Input - Search'" sap:VirtualizedContainerService.HintSize="954,830" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2b5d16a5-4e65-4dfb-b87c-41a496a7c459" Timeout="60" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,590" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,588" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type PersonsName" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,288" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2b5d16a5-4e65-4dfb-b87c-41a496a7c459" Text="[G_PersonsName]" Version="V4">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type PersonsName" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2b5d16a5-4e65-4dfb-b87c-41a496a7c459" Text="[in_PersonsName]" Version="V4">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="linkedin.com/feed" CVScreenId="718d6e30-f01e-4214-a85e-6ee92263eaba" ContentHash="gVKAWmtPSEqCDia-thv7FQ" CvTextArea="804, 167, 43, 13" CvTextArgument="Search" CvType="Text" DesignTimeRectangle="488, 156, 280, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Search' class='*input search*' /&gt;" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Search' class='*input search*' type='text' placeholder='Search' /&gt;" Guid="ff3a3925-cf73-4390-80e5-b79e6a2b4c1a" InformativeScreenshot="99bf8e6037401aba8d53fa690d6a107f.png" IsResponsive="True" Reference="hPsj5yDg0k6roj3PXS8Ayw/hqNweiH_NUmSeA5MVmbOyw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -146,7 +156,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Click Enter" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,242" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4">
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Click Enter" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4">
                     <uix:NKeyboardShortcuts.VerifyOptions>
                       <uix:VerifyExecutionOptions DisplayName="Label 'Label 'Posts''" Mode="Appears">
                         <uix:VerifyExecutionOptions.Retry>
@@ -170,13 +180,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw DisplayName="Throw: Linkedin: Input - Search was not found" Exception="[new SystemException(&quot;Linkedin: Input - Search was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Throw: Linkedin: Input - Search was not found" Exception="[new SystemException(&quot;Linkedin: Input - Search was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
