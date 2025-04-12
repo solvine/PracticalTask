@@ -1,4 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ClickSignIn" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Linkedin_ClickSignIn_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ClickSignIn" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_SignInWithAnotherAccount" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Linkedin_ClickSignIn_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -92,27 +99,30 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_ClickSignIn" sap:VirtualizedContainerService.HintSize="2186,1360" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_ClickSignIn" sap:VirtualizedContainerService.HintSize="3333,1417" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="2186,1337" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3519cd15-e224-4bbb-a379-ce3031967fbd" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="3333,1394" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3519cd15-e224-4bbb-a379-ce3031967fbd" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2152,1097" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3299,1154" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Button - Sign in'" sap:VirtualizedContainerService.HintSize="2118,569" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Button - Sign in'" sap:VirtualizedContainerService.HintSize="3265,569" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -163,27 +173,41 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <Parallel DisplayName="Parallel Sign In Using Another Account" sap:VirtualizedContainerService.HintSize="2118,466" sap2010:WorkflowViewState.IdRef="Parallel_1">
+            <Parallel DisplayName="Parallel Sign In Using Another Account" sap:VirtualizedContainerService.HintSize="3265,523" sap2010:WorkflowViewState.IdRef="Parallel_1">
               <Parallel.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="LeaveParallel" />
               </Parallel.Variables>
               <Parallel.CompletionCondition>[LeaveParallel = True]</Parallel.CompletionCondition>
-              <uix:NCheckState DisplayName="Check App State 'Label - Sign in using another account'" sap:VirtualizedContainerService.HintSize="1012,394" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
+              <uix:NCheckState DisplayName="Check App State 'Label - Sign in using another account'" sap:VirtualizedContainerService.HintSize="1057,451" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,169" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign LeaveParallel" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_1">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                      </Assign.Value>
-                    </Assign>
+                    <ui:MultipleAssign DisplayName="Set LeaveParallel &amp; out_SignInWithAnotherAccount" sap:VirtualizedContainerService.HintSize="479,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[out_SignInWithAnotherAccount]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
@@ -206,22 +230,36 @@
                   </uix:TargetAnchorable>
                 </uix:NCheckState.Target>
               </uix:NCheckState>
-              <uix:NCheckState DisplayName="Check App State 'Label - Sign in using another account 2'" sap:VirtualizedContainerService.HintSize="1012,394" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
+              <uix:NCheckState DisplayName="Check App State 'Label - Sign in using another account 2'" sap:VirtualizedContainerService.HintSize="1057,451" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,169" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign LeaveParallel" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_2">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                      </Assign.Value>
-                    </Assign>
+                    <ui:MultipleAssign DisplayName="Set LeaveParallel &amp; out_SignInWithAnotherAccount" sap:VirtualizedContainerService.HintSize="479,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[out_SignInWithAnotherAccount]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
@@ -236,6 +274,52 @@
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
                   <uix:TargetAnchorable BrowserURL="linkedin.com/login" CVScreenId="d720bc5f-2167-477d-845d-a9f0054ca092" ContentHash="f1MKpEbxNU2nGnT1USqL-w" CvTextArea="1179, 972, 217, 19" CvTextArgument="*Sign in using another account*" CvType="Text" DesignTimeRectangle="1172, 961, 232, 37" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='signin-other-account' /&gt;&lt;webctrl tag='A' aaname='*Sign in using another account*' check:text='Sign in using another account' /&gt;" Guid="8c1eca33-0fb6-43d6-a91b-094e38fc398c" InformativeScreenshot="cae09bd52652060be138642b332dbbbe.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/QDwrm8zTj0WVMKGLemZDuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <uix:NCheckState DisplayName="Check App State 'Button - Sign In 2'" sap:VirtualizedContainerService.HintSize="1057,451" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="3519cd15-e224-4bbb-a379-ce3031967fbd" Timeout="60" Version="V4">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Set LeaveParallel &amp; out_SignInWithAnotherAccount" sap:VirtualizedContainerService.HintSize="479,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[out_SignInWithAnotherAccount]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw: Linkedin: Button - Sign In 2 was not found" Exception="[new SystemException(&quot;Linkedin: Button - Sign In 2 was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="linkedin.com/checkpoint/lg/sign-in-another-account" CVScreenId="f5224d36-7c1f-4736-9a43-47742cbf2f8b" ContentHash="v7_F_qCnZkGi-ltKQu7aog" CvElementArea="1133, 885, 309, 57" CvTextArea="1261, 906, 53, 20" CvTextArgument="Sign in*" CvType="Button" DesignTimeRectangle="1136, 888, 304, 52" DesignTimeScaleFactor="1" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='BUTTON' type='submit' aria-label='Sign in' check:text='Sign in*' /&gt;" Guid="859f9811-a79c-4f1f-b040-cc61fb4238ab" InformativeScreenshot="cda2771e0dfb21530b834de8d7516fad.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/UVzYKm3vYUWP8UhEnjJ3Gw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
                 </uix:NCheckState.Target>
               </uix:NCheckState>
             </Parallel>

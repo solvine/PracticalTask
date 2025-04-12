@@ -92,34 +92,34 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="1835,1770" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="1835,1254" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence Get Tools And Technologies" sap:VirtualizedContainerService.HintSize="634,1747" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Sequence Get Tools And Technologies" sap:VirtualizedContainerService.HintSize="566,1231" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message: Start" sap:VirtualizedContainerService.HintSize="600,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting to get Person's Tools and Technologies&quot;]" />
-      <ui:RetryScope DisplayName="Retry Get Tools And Technologies" sap:VirtualizedContainerService.HintSize="600,1491" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+      <ui:LogMessage DisplayName="Log Message: Start" sap:VirtualizedContainerService.HintSize="532,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting to get Person's Tools and Technologies&quot;]" />
+      <ui:RetryScope DisplayName="Retry Get Tools And Technologies" sap:VirtualizedContainerService.HintSize="532,975" sap2010:WorkflowViewState.IdRef="RetryScope_2">
         <ui:RetryScope.ActivityBody>
           <ActivityAction>
-            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="558,1293" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="490,777" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Get Tools And Technologies" sap:VirtualizedContainerService.HintSize="524,1233" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Get Tools And Technologies" sap:VirtualizedContainerService.HintSize="456,717" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <TryCatch.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="PersonFound" />
                 </TryCatch.Variables>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="484,320" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="484,911" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="ToolsAndTechnologiesFound" />
                     </Sequence.Variables>
@@ -167,7 +167,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="490,1048" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,532" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,26 +178,27 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="484,978" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence sap:VirtualizedContainerService.HintSize="416,462" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StartUp - Invoke Workflow File (Person Processing\StartUp.xaml)" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Person Processing\StartUp.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StartUp - Invoke Workflow File (Person Processing\StartUp.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Person Processing\StartUp.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_VerificationNeeded" />
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PersonSearch" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Person Processing\PersonSearch.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PersonSearch" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Person Processing\PersonSearch.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_PersonFound">[PersonFound]</OutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_PersonsName">[in_PersonsName]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <If Condition="[PersonFound = True]" DisplayName="If Person Is Found" sap:VirtualizedContainerService.HintSize="450,564" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[PersonFound = True]" DisplayName="If Person Is Found" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="If_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
