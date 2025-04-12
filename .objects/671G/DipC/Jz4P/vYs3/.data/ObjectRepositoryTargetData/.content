@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yO5lQdW8eUi3oJZXIy-CUA" Reference="hPsj5yDg0k6roj3PXS8Ayw/vYs3a-UL0kqzWukfoqfWNA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/checkpoint/lg/sign-in-another-account" CVScreenId="e4cbc296-051a-4993-b11c-dee2d162c7a0" DesignTimeRectangle="1136, 704, 304, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' aria-label='Email or phone' type='email' aaname='*Email or phone*' /&gt;" Guid="9d87f355-992f-4153-a0cc-b5e1f3971eb4" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8af74209f4552fa28a04fd335c0e85c2.png" xmlns="">0e04uqmSQSEmIN1EW4nKVgQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

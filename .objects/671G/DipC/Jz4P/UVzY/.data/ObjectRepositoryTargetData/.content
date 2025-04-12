@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="v7_F_qCnZkGi-ltKQu7aog" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/checkpoint/lg/sign-in-another-account" CVScreenId="f5224d36-7c1f-4736-9a43-47742cbf2f8b" CvElementArea="1133, 885, 309, 57" CvTextArea="1261, 906, 53, 20" CvTextArgument="Sign in*" CvType="Button" DesignTimeRectangle="1136, 888, 304, 52" DesignTimeScaleFactor="1" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='BUTTON' type='submit' aria-label='Sign in' check:text='Sign in*' /&gt;" Guid="859f9811-a79c-4f1f-b040-cc61fb4238ab" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cda2771e0dfb21530b834de8d7516fad.png" xmlns="">088XEn5kz0ESqEhgqIwCfzA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

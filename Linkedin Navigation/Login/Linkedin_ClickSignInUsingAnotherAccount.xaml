@@ -1,0 +1,265 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Linkedin_ClickSignInUsingAnotherAccount" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Linkedin_ClickSignInUsingAnotherAccount_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Linkedin_ClickSignInUsingAnotherAccount" sap:VirtualizedContainerService.HintSize="1260,842" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,819" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a9e0bc1c-8bce-4f77-b9ef-a68a52e5f66f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,579" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Parallel sap:VirtualizedContainerService.HintSize="954,57" sap2010:WorkflowViewState.IdRef="Parallel_1">
+              <Parallel.Variables>
+                <Variable x:TypeArguments="x:Boolean" Default="False" Name="LeaveParallel" />
+              </Parallel.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Parallel.CompletionCondition>[LeaveParallel = True]</Parallel.CompletionCondition>
+              <uix:NCheckState DisplayName="Check App State 'Label - Sign in using another account'" sap:VirtualizedContainerService.HintSize="1012,616" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a9e0bc1c-8bce-4f77-b9ef-a68a52e5f66f" Timeout="60" Version="V4">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,397" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Label - Sign in using another account'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9e0bc1c-8bce-4f77-b9ef-a68a52e5f66f" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="linkedin.com/login" CVScreenId="75932b1e-c09f-4592-8d0b-fe94f3ddf56d" ContentHash="gGDRuYzDY0WFmoqvEMLLug" DesignTimeRectangle="1090, 401, 382, 72" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*Sign in using another account                    *' parentid='rememberme-div' tag='BUTTON' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl aaname='*Sign in using another account*' tag='BUTTON' check:text='Sign in using another account*' /&gt;" Guid="b907703a-9551-4f29-b56b-5a4d0959e5ec" InformativeScreenshot="a32c30cccdd479424dd44870c98f60d6.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/UscvOo2zNEOt-1XWHERKGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="75932b1e-c09f-4592-8d0b-fe94f3ddf56d" CvTextArea="1184, 503, 193, 14" CvTextArgument="New to Linkedln? Join now" CvType="Text" DesignTimeRectangle="717, 498, 1128, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl tag='P' aaname='*New to LinkedIn*' /&gt;" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl tag='P' aaname='*New to LinkedIn*' check:text='New to LinkedIn? Join now' /&gt;" Guid="2661c348-2374-485a-b990-0ec0cbcb97ad" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <Assign DisplayName="Assign LeaveParallel" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw: Linkedin: Label - Sign in using another account was not found" Exception="[new SystemException(&quot;Linkedin: Label - Sign in using another account was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="linkedin.com/login" CVScreenId="75932b1e-c09f-4592-8d0b-fe94f3ddf56d" ContentHash="gGDRuYzDY0WFmoqvEMLLug" DesignTimeRectangle="1090, 401, 382, 72" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*Sign in using another account                    *' parentid='rememberme-div' tag='BUTTON' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl aaname='*Sign in using another account*' tag='BUTTON' check:text='Sign in using another account*' /&gt;" Guid="b907703a-9551-4f29-b56b-5a4d0959e5ec" InformativeScreenshot="a32c30cccdd479424dd44870c98f60d6.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/UscvOo2zNEOt-1XWHERKGQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="75932b1e-c09f-4592-8d0b-fe94f3ddf56d" CvTextArea="1184, 503, 193, 14" CvTextArgument="New to Linkedln? Join now" CvType="Text" DesignTimeRectangle="717, 498, 1128, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl tag='P' aaname='*New to LinkedIn*' /&gt;" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl tag='P' aaname='*New to LinkedIn*' check:text='New to LinkedIn? Join now' /&gt;" Guid="2661c348-2374-485a-b990-0ec0cbcb97ad" SearchSteps="Selector, FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <uix:NCheckState DisplayName="Check App State 'Label - Sign in using another account 2'" sap:VirtualizedContainerService.HintSize="1012,616" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="a9e0bc1c-8bce-4f77-b9ef-a68a52e5f66f" Version="V4">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="468,397" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Label - Sign in using another account 2'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a9e0bc1c-8bce-4f77-b9ef-a68a52e5f66f" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="linkedin.com/login" CVScreenId="d720bc5f-2167-477d-845d-a9f0054ca092" ContentHash="f1MKpEbxNU2nGnT1USqL-w" CvTextArea="1179, 972, 217, 19" CvTextArgument="*Sign in using another account*" CvType="Text" DesignTimeRectangle="1172, 961, 232, 37" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='signin-other-account' /&gt;&lt;webctrl tag='A' aaname='*Sign in using another account*' check:text='Sign in using another account' /&gt;" Guid="8c1eca33-0fb6-43d6-a91b-094e38fc398c" InformativeScreenshot="cae09bd52652060be138642b332dbbbe.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/QDwrm8zTj0WVMKGLemZDuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <Assign DisplayName="Assign LeaveParallel" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[LeaveParallel]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,176" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw: Linkedin: Label - Sign in using another account 2 was not found" Exception="[new SystemException(&quot;Linkedin: Label - Sign in using another account 2 was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="linkedin.com/login" CVScreenId="d720bc5f-2167-477d-845d-a9f0054ca092" ContentHash="f1MKpEbxNU2nGnT1USqL-w" CvTextArea="1179, 972, 217, 19" CvTextArgument="*Sign in using another account*" CvType="Text" DesignTimeRectangle="1172, 961, 232, 37" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='signin-other-account' /&gt;&lt;webctrl tag='A' aaname='*Sign in using another account*' check:text='Sign in using another account' /&gt;" Guid="8c1eca33-0fb6-43d6-a91b-094e38fc398c" InformativeScreenshot="cae09bd52652060be138642b332dbbbe.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/QDwrm8zTj0WVMKGLemZDuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+            </Parallel>
+            <uix:NCheckState DisplayName="Check App State 'Button - Sign In 2'" sap:VirtualizedContainerService.HintSize="954,460" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="a9e0bc1c-8bce-4f77-b9ef-a68a52e5f66f" Timeout="60" Version="V4">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,178" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw: Linkedin: Button Sign In 2 was not found" Exception="[new SystemException(&quot;Linkedin: Button Sign In 2 was not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="linkedin.com/checkpoint/lg/sign-in-another-account" CVScreenId="f5224d36-7c1f-4736-9a43-47742cbf2f8b" ContentHash="v7_F_qCnZkGi-ltKQu7aog" CvElementArea="1133, 885, 309, 57" CvTextArea="1261, 906, 53, 20" CvTextArgument="Sign in*" CvType="Button" DesignTimeRectangle="1136, 888, 304, 52" DesignTimeScaleFactor="1" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='BUTTON' type='submit' aria-label='Sign in' check:text='Sign in*' /&gt;" Guid="859f9811-a79c-4f1f-b040-cc61fb4238ab" InformativeScreenshot="cda2771e0dfb21530b834de8d7516fad.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/UVzYKm3vYUWP8UhEnjJ3Gw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 2576, 1408" BrowserType="Chrome" ContentHash="WNddIsLDFkOuVjPE_EvgdQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVFhH7VffS1NhGD6zZduRujEpUAvCugm66KbLoKuulbooCNLO2S5aoZIGRUJU5kV3GVJ/gQVFNYRIaueI82dLCq2b1C2z0JmliVvNPfF821lzbnPYjnjhCw/nO+/3ve/7fN/7/eCVpI0gdkUjCmRFL5FVvcxkFMtO3SI79Hhwh0cqPN9hsat6lazqPlnVP5uMPlnVq7a4XlpsTo8kyapOFMc7sE7gRLnaCQJcGrJLDLIrOrad0wTYTuPkf8BYjJmeAAOW13lxsnVYYG99T75JZCbAQHvqe9DeN4WF8BIWwhG090+hvC6vJDIT4JKfaB3Gr1AEhrBNHfvSOFsLNjCBWP6NFEREGpgCpmVdUkAwEDceZ01wQ+YS3B63zWFsdgKEtUZDwVmPwNYaTTinnmngvwEjIPXbnV3YdaEbJa7uxNg0wbMToDM6ufxoFLfcfgG2qaPD43feodkdwM3nfjQ9GcehqwPYfdGLU20jeOCZxIv3M3APBXHb7ceR629QtDJ4dgI2Rcf+xj5MfA8lNiHb1FmrPSKwIfOLEVx7PIanvmmxX5IlCmBsehFn7n9AkcMkAr8jUXz7GUaU0TKIP7iIo81vYVuejvwQMCSyFEVgJgTf+HyMUEr/vVdfsMPZZQ6B8J8l3O2cwOGmQZTV9uBYyxD6R+eWjRkcm0u9SfNHwPNxFqW1XhTGHy2ejNNtI+L+MMQfDKGioVf4zjuBlo7AsuNmUzQcvDKArz/CK+xNIXDj2biY9T8COioa0tuvG4FM9psENgnkTGDfpV5xeUzOhgTYps5araHx4Sdx29Epv/wvTCGQyT4nAgSfVRqQNcE2dXyS+fIdiOv55StpPNWr2SeNyU7AmEkyDD1vu2R9avDV7DMRYJHAYiF1oFlgEcRiSJJYHlldnRa7qlXGO8jOTPhkVau01r222J1arD6UVY0okBWNrLg0a0XpqlC0nSyEWRBvCPkL503cP2RijC4AAAAASUVORK5CYII=" InformativeScreenshot="5f59c039a00343c6b973ae140d89f39d.jpg" Reference="hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w" Selector="&lt;html app='chrome.exe' url='https://www.linkedin.com/*' /&gt;" Url="https://www.linkedin.com/" Version="V1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

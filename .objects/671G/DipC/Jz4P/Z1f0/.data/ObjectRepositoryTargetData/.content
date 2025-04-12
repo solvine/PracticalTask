@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SYI5IUPzjU-4HLpJTif1qA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/checkpoint/lg/login-submit" DesignTimeRectangle="1136, 788, 304, 39" DesignTimeScaleFactor="1" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='error-for-password' tag='DIV' class='form__label--error*' aaname='*Wrong email or password*' check:innerText='Wrong email or password*' /&gt;" Guid="e40f36be-c3d8-4902-8ce1-6325106273ca" ScopeSelectorArgument="&lt;html app='chrome.exe' title='LinkedIn Login, Sign in | LinkedIn' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5dc5a0b8-4620-4b65-bb13-241d798f3812" CvTextArea="1135, 843, 130, 19" CvTextArgument="Forgot password?" CvType="Text" DesignTimeRectangle="1128, 835, 144, 32" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='reset-password-button' tag='A' aaname='*Forgot password?*' check:innerText='Forgot password?' /&gt;" Guid="51263891-ef2e-4a5b-bc59-cd9cb4fb337b" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="5075f7418b553b7ad80406bd0fdda531.png" xmlns="">0chbUTpsYukeyMjHmnWBEXQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

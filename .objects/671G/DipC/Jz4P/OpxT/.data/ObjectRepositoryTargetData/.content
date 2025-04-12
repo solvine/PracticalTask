@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1VU9rKABwE-Ry2C3GLdx4Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/home" CVScreenId="b361e73c-e8cc-4b5e-91a9-254139e3228c" CvElementArea="1742, 105, 109, 56" CvTextArea="1770, 125, 51, 19" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="1747, 109, 98, 48" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='NAV' aria-label='Primary' /&gt;&lt;webctrl aaname='*Sign in*' tag='A' check:text='Sign in' /&gt;" Guid="21fbdc88-e851-49c1-a391-17da62ac4648" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="b361e73c-e8cc-4b5e-91a9-254139e3228c" CvTextArea="1648, 125, 67, 15" CvTextArgument="Join now" CvType="Text" DesignTimeRectangle="1626, 109, 113, 48" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='NAV' aria-label='Primary' /&gt;&lt;webctrl aaname='*Join now*' tag='A' check:text='Join now' /&gt;" Guid="d0d22d8c-4c3f-4621-b571-c715701bf31d" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8060f84bbb4e6a79d6fe1eb32c770adf.png" xmlns="">0TlkOimh9RkuPtnPde2Z09w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

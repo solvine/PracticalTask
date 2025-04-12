@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Label - Sign in using another account",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "UscvOo2zNEOt-1XWHERKGQ",
+  "Reference": "hPsj5yDg0k6roj3PXS8Ayw/UscvOo2zNEOt-1XWHERKGQ",
+  "ParentRef": "hPsj5yDg0k6roj3PXS8Ayw/Jz4PG7wzWka1N3jPC_sa7w",
+  "Created": "2025-04-11T18:24:44.1726825Z",
+  "Updated": "2025-04-11T18:25:04.8966329Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

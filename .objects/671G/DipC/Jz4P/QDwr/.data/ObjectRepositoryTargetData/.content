@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="f1MKpEbxNU2nGnT1USqL-w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/login" CVScreenId="d720bc5f-2167-477d-845d-a9f0054ca092" CvTextArea="1179, 972, 217, 19" CvTextArgument="*Sign in using another account*" CvType="Text" DesignTimeRectangle="1172, 961, 232, 37" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='signin-other-account' /&gt;&lt;webctrl tag='A' aaname='*Sign in using another account*' check:text='Sign in using another account' /&gt;" Guid="8c1eca33-0fb6-43d6-a91b-094e38fc398c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cae09bd52652060be138642b332dbbbe.png" xmlns="">0HfES7OkkJ0yuiRUA3O1Vng</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

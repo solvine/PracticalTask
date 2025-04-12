@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="gGDRuYzDY0WFmoqvEMLLug" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/login" CVScreenId="75932b1e-c09f-4592-8d0b-fe94f3ddf56d" DesignTimeRectangle="1090, 401, 382, 72" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*Sign in using another account                    *' parentid='rememberme-div' tag='BUTTON' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl aaname='*Sign in using another account*' tag='BUTTON' check:text='Sign in using another account*' /&gt;" Guid="b907703a-9551-4f29-b56b-5a4d0959e5ec" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="75932b1e-c09f-4592-8d0b-fe94f3ddf56d" CvTextArea="1184, 503, 193, 14" CvTextArgument="New to Linkedln? Join now" CvType="Text" DesignTimeRectangle="717, 498, 1128, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl tag='P' aaname='*New to LinkedIn*' /&gt;" FuzzyAccuracy="0.8" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl id='rememberme-div' tag='DIV' /&gt;&lt;webctrl tag='P' aaname='*New to LinkedIn*' check:text='New to LinkedIn? Join now' /&gt;" Guid="2661c348-2374-485a-b990-0ec0cbcb97ad" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a32c30cccdd479424dd44870c98f60d6.png" xmlns="">0bGOGS3JNCUWZAHt6XTMDLA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
