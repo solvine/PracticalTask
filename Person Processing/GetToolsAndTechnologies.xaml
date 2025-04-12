@@ -91,7 +91,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="983,1254" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="1835,1254" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -118,7 +118,7 @@
                   <Variable x:TypeArguments="x:Boolean" Name="PersonFound" />
                 </TryCatch.Variables>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="484,823" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="484,911" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="ToolsAndTechnologiesFound" />
                     </Sequence.Variables>
@@ -159,7 +159,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Return sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Return_1" />
+                          <ui:Return DisplayName="Return back" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Return_1" />
                         </Sequence>
                       </If.Else>
                     </If>
@@ -193,7 +193,7 @@
                             <OutArgument x:TypeArguments="x:Boolean" x:Key="out_PersonFound">[PersonFound]</OutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <If Condition="[PersonFound = True]" DisplayName="If Person Is Found" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[PersonFound = True]" DisplayName="If Person Is Found" sap:VirtualizedContainerService.HintSize="450,541" sap2010:WorkflowViewState.IdRef="If_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -218,7 +218,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <Throw DisplayName="Throw: Linkedin: Person was not found" Exception="[new SystemException(&quot;Linkedin: Person &quot;+ G_PersonsName +&quot; was not found&quot;)]" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                              <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="[&quot;Linkedin: Person &quot;+ G_PersonsName+&quot; was not found on Linkedin&quot;]" />
+                              <TerminateWorkflow DisplayName="Terminate Linkedin Workflow" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="[&quot;Linkedin: Person &quot;+ G_PersonsName+&quot; was not found on Linkedin&quot;]" />
                             </Sequence>
                           </If.Else>
                         </If>

@@ -94,12 +94,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="StartUp" sap:VirtualizedContainerService.HintSize="983,3369" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="StartUp" sap:VirtualizedContainerService.HintSize="1835,3542" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message: Linkedin StartUp" sap:VirtualizedContainerService.HintSize="666,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting up Linkedin&quot;]" />
     <ui:RetryScope DisplayName="Retry StartUp Scope" sap:VirtualizedContainerService.HintSize="666,3346" sap2010:WorkflowViewState.IdRef="RetryScope_1">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
@@ -131,8 +132,6 @@
                       <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,2249" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="Username" />
-                          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ValidUsername" />
-                          <Variable x:TypeArguments="x:Boolean" Default="False" Name="ValidPassword" />
                           <Variable x:TypeArguments="x:String" Name="Password" />
                           <Variable x:TypeArguments="x:Boolean" Name="WrongCredentials" />
                         </Sequence.Variables>

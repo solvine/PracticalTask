@@ -93,13 +93,13 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FillExcelFile" sap:VirtualizedContainerService.HintSize="680,975" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FillExcelFile" sap:VirtualizedContainerService.HintSize="1835,1148" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Fills in Tools &amp; Technologies file depending on whether it already exists or not" DisplayName="Sequence FillExcelFile" sap:VirtualizedContainerService.HintSize="484,952" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Fills in Tools &amp; Technologies file depending on whether it already exists or not" DisplayName="Sequence FillExcelFile" sap:VirtualizedContainerService.HintSize="484,1125" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="DestinationPath" />
         <Variable x:TypeArguments="x:Boolean" Name="FileExists" />
@@ -110,6 +110,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message: Fill Excel File Started" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting to Fill Excel File&quot;]" />
       <Assign DisplayName="Assign DestinationPath" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[DestinationPath]</OutArgument>
@@ -127,7 +128,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AppendRange WorkbookPathResource="{x:Null}" DataTable="[in_dt_ToolsAndTechnologies]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="[DestinationPath]" />
+            <ui:AppendRange WorkbookPathResource="{x:Null}" DataTable="[in_dt_ToolsAndTechnologies]" DisplayName="Append dt_ToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="[DestinationPath]" />
           </Sequence>
         </If.Then>
         <If.Else>

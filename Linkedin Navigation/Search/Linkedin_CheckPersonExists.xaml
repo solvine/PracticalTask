@@ -101,7 +101,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_CheckPersonExists" sap:VirtualizedContainerService.HintSize="1260,909" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_CheckPersonExists" sap:VirtualizedContainerService.HintSize="1852,952.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,7 +128,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign PersonFound" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign DisplayName="Assign PersonFound True" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[out_PersonFound]</OutArgument>
                     </Assign.To>
@@ -145,7 +145,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign PersonFound" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign DisplayName="Assign PersonFound False" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[out_PersonFound]</OutArgument>
                     </Assign.To>

@@ -103,7 +103,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_ClickToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="1260,1572" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_ClickToolsAndTechnologies" sap:VirtualizedContainerService.HintSize="1835,1672" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="AriaChecked" />
     </Sequence.Variables>
@@ -112,21 +112,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1074,1549" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="cab99aaf-1af4-45be-8173-126d0748ee76" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Screen - Linkedin Feed" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1074,1649" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="cab99aaf-1af4-45be-8173-126d0748ee76" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1040,1309" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1040,1409" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Button - Tools &amp; Technologies'" sap:VirtualizedContainerService.HintSize="1006,1247" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="cab99aaf-1af4-45be-8173-126d0748ee76" Timeout="15" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Button - Tools &amp; Technologies'" sap:VirtualizedContainerService.HintSize="1006,1347" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="cab99aaf-1af4-45be-8173-126d0748ee76" Timeout="15" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="484,1005" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="484,1065" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +161,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aria-checked" DisplayName="Get Attribute 'Button - Tools &amp; Technologies'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,241" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[AriaChecked]" ScopeIdentifier="cab99aaf-1af4-45be-8173-126d0748ee76" Version="V4">
+                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aria-checked" DisplayName="Get Attribute 'Button - Tools &amp; Technologies'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,239" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[AriaChecked]" ScopeIdentifier="cab99aaf-1af4-45be-8173-126d0748ee76" Version="V4">
                     <uix:NGetAttributeGeneric.Target>
                       <uix:TargetAnchorable BrowserURL="linkedin.com/in/victor-buga-82823964/details/skills" CVScreenId="6cc4ec12-57d0-46bb-ab75-c8fc60fff63c" ContentHash="ScC4yHs5BUSU5zMZzhe8HA" CvElementArea="689, 342, 182, 36" CvTextArea="702, 352, 155, 19" CvTextArgument="Tools &amp; Technologies" CvType="Button" DesignTimeRectangle="692, 344, 176, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='*Tools*Technologies*' check:innerText='Tools &amp;amp; Technologies' /&gt;" Guid="d739bde0-0d3c-4b71-b919-826695947732" InformativeScreenshot="be4247a454e6318a13183f2e5be28e10.png" Reference="hPsj5yDg0k6roj3PXS8Ayw/t9op756oXUSv4n36zeJxVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -172,25 +172,25 @@
                       </uix:TargetAnchorable>
                     </uix:NGetAttributeGeneric.Target>
                   </uix:NGetAttributeGeneric>
-                  <If Condition="[AriaChecked=&quot;true&quot;]" DisplayName="If Tools &amp; Technologies Button Selected" sap:VirtualizedContainerService.HintSize="450,363" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[AriaChecked=&quot;false&quot;]" DisplayName="If Tools &amp; Technologies Button Not Selected" sap:VirtualizedContainerService.HintSize="450,425" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw: Linkedin: failed to select Button - Tools &amp; Technologies" Exception="[new SystemException(&quot;Linkedin: failed to select Button - Tools &amp; Technologies&quot;)]" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,174" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="Throw: Linkedin: failed to select Button - Tools &amp; Technologies" Exception="[new SystemException(&quot;Linkedin: failed to select Button - Tools &amp; Technologies&quot;)]" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Else>
                   </If>
@@ -198,9 +198,6 @@
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
                 <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,169" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="ToolsAndTechnologiesFound" />
-                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

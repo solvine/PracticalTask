@@ -83,28 +83,29 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PersonSearch" sap:VirtualizedContainerService.HintSize="983,904" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PersonSearch" sap:VirtualizedContainerService.HintSize="1835,1699" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence Person Search" sap:VirtualizedContainerService.HintSize="566,881" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Sequence Person Search" sap:VirtualizedContainerService.HintSize="632,1676" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RetryScope DisplayName="Retry Person Search" sap:VirtualizedContainerService.HintSize="532,798" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+      <ui:LogMessage DisplayName="Log Message: Person Search Start" sap:VirtualizedContainerService.HintSize="598,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Starting to Search for a person on Linkedin&quot;]" />
+      <ui:RetryScope DisplayName="Retry Person Search" sap:VirtualizedContainerService.HintSize="598,1420" sap2010:WorkflowViewState.IdRef="RetryScope_1">
         <ui:RetryScope.ActivityBody>
           <ActivityAction>
-            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="490,600" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="556,1222" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Person Search" sap:VirtualizedContainerService.HintSize="456,540" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Person Search" sap:VirtualizedContainerService.HintSize="522,1162" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
                   <Sequence DisplayName="Sequence Person Search" sap:VirtualizedContainerService.HintSize="484,911" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
@@ -151,10 +152,10 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,355" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="488,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -162,7 +163,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="416,285" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

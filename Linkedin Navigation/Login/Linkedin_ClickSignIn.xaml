@@ -163,7 +163,7 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <Parallel sap:VirtualizedContainerService.HintSize="2118,466" sap2010:WorkflowViewState.IdRef="Parallel_1">
+            <Parallel DisplayName="Parallel Sign In Using Another Account" sap:VirtualizedContainerService.HintSize="2118,466" sap2010:WorkflowViewState.IdRef="Parallel_1">
               <Parallel.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="LeaveParallel" />
               </Parallel.Variables>

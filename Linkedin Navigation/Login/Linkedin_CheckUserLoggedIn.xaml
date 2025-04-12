@@ -99,7 +99,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Linkedin_Login" sap:VirtualizedContainerService.HintSize="2276,888" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Linkedin_Login" sap:VirtualizedContainerService.HintSize="2276,935.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -117,7 +117,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Parallel sap:VirtualizedContainerService.HintSize="2208,563" sap2010:WorkflowViewState.IdRef="Parallel_1">
+            <Parallel DisplayName="Parallel Check User Signed In" sap:VirtualizedContainerService.HintSize="2208,563" sap2010:WorkflowViewState.IdRef="Parallel_1">
               <Parallel.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="LeaveParallel" />
               </Parallel.Variables>
